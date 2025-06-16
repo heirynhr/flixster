@@ -1,0 +1,23 @@
+
+
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+  padding: 6px;
+  margin-bottom: 2%;
+}
+#websiteTitle {
+    margin: 0.5%;
+    margin-top: .5%;
+}
+
+.UserHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}

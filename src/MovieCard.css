@@ -1,0 +1,46 @@
+.Card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    align-items: left;
+    
+
+    background-color: #8891944c;
+    border: solid rgb(57, 62, 68);
+    border-radius: 8px;
+
+    box-sizing: content-box;
+    height: 100%;
+    box-shadow: 5px 5px 10px rgba(180, 194, 231, 0.2);
+}
+
+.Card:hover {
+    transform: scale(1.02);
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+    box-shadow: 5px 5px 10px rgba(0, 221, 255, 0.35);
+    background-color: #9bbbc761;
+}
+
+.moviePosterImg{
+    display: block; 
+    object-fit: cover;
+    aspect-ratio: 0.5;
+    width: 70%;
+
+    max-width: 60%;
+    max-height: 70%;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    padding-bottom: 5%;
+}
+
+.movieTitle{
+    margin: 0%;
+}
+
+.movieRating {
+    margin: 0%;
+}
