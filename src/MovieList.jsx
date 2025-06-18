@@ -3,10 +3,12 @@ import axios from "axios";
 import './MovieList.css'
 import MovieCard from './MovieCard';
 
-function MovieList( {searchResults}) {
+function MovieList( {searchResults, sortFilter}) {
     const [page, setPage] = useState(1);
     const [movies,setMovies] = useState([]);
-    const [selectedMovie, setSelectedMovies]=useState(null);
+
+    
+
     
     // this runs everytime searchResults is changed
     useEffect(() => {
@@ -15,6 +17,7 @@ function MovieList( {searchResults}) {
         }
     }, [searchResults]);
 
+
     //1. fetch list on mount - fetch the info as soon as page loads
     useEffect(() => {
         // if there are no search results jsut default to the popular movies 
@@ -22,17 +25,30 @@ function MovieList( {searchResults}) {
             const fetchList = async () => {
                 const apiKey = import.meta.env.VITE_API_KEY;
                 //console.log("API Key:", import.meta.env.VITE_API_KEY);
-                try {
-                const { data } = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&page=${page}&include_adult=false`);
+                
 
-                if (page === 1) {
-                    setMovies(data.results);
+                //default according to api documentation, should work for the regular nowplaying thing 
+                let sortChoice = "popularity.desc"; 
+                if (sortFilter === "title") {
+                    sortChoice = "original_title.asc";
                 } 
-                else {
-                    // ff it's not the first page, add new movies to the old list
-                    setMovies(prevMovies => [...prevMovies, ...data.results]);
+                else if (sortFilter === "voteAvg") {
+                    sortChoice = "vote_average.desc";
+                } 
+                else if (sortFilter === "date") {
+                    sortChoice = "release_date.desc";
                 }
-                console.log(data.results);
+                try {
+                    const { data } = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&page=${page}&include_adult=false&language=en-US&sort_by=${sortChoice}&with_release_type=2|3`);
+                    //const { data } = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&page=${page}&include_adult=false`);
+                    if (page === 1) {
+                        setMovies(data.results);
+                    } 
+                    else {
+                        // ff it's not the first page, add new movies to the old list
+                        setMovies(prevMovies => [...prevMovies, ...data.results]);
+                    }
+                    console.log(data.results);
                 }
                 catch (err) {
                     console.error("Error fetch list:" ,err)
@@ -40,7 +56,7 @@ function MovieList( {searchResults}) {
             };
             fetchList();
     }
-    }, [page, searchResults])
+    }, [page, searchResults, sortFilter])
     // brackets are the depencacy list
 
     const handleLoadMore = () => {
@@ -91,7 +107,7 @@ function MovieList( {searchResults}) {
         {loadMoreButton}
 
     </>
-  );
+    );
 }
 
 export default MovieList;

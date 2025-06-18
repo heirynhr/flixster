@@ -2,19 +2,29 @@
 
 .MovieGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 5fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 3fr));
     grid-template-rows: auto;
     grid-gap:5dvh 2dvh;
     justify-content: center;  
     padding-left: 5%;    
     padding-right: 5%;  
-    padding-top: 1%;
+    padding-top: 2%;
     padding-bottom: 1%; 
 
-    margin-top: 1%;
+
     margin-bottom: 2%;
     
     box-sizing: border-box;
     overflow: scroll;
 
+}
+
+.moreBtn {
+    background-color: rgb(44, 77, 139);
+    padding: 0.8%;
+}
+.moreBtn:hover {
+    transform: scale(1.08);
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+    background-color: rgb(62, 110, 199);
 }

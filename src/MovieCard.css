@@ -8,8 +8,8 @@
     align-items: left;
     
 
-    background-color: #8891944c;
-    border: solid rgb(57, 62, 68);
+    background-color: #4d525b9a;
+    border: solid rgb(97, 107, 119);
     border-radius: 8px;
 
     box-sizing: content-box;
@@ -18,29 +18,49 @@
 }
 
 .Card:hover {
-    transform: scale(1.02);
+    transform: scale(1.04);
     transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
-    box-shadow: 5px 5px 10px rgba(0, 221, 255, 0.35);
-    background-color: #9bbbc761;
+    box-shadow: 5px 5px 10px rgba(211, 165, 255, 0.671);
+    background: #d786fd7c;
+    background: linear-gradient(nulldeg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
 }
 
 .moviePosterImg{
     display: block; 
-    object-fit: cover;
-    aspect-ratio: 0.5;
+    aspect-ratio: 1/1.5;
     width: 70%;
 
     max-width: 60%;
     max-height: 70%;
     margin-top: 1%;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
     padding-bottom: 5%;
 }
 
 .movieTitle{
+    color: rgb(242, 246, 250);
     margin: 0%;
 }
 
 .movieRating {
+    text-align: end;
+    color: rgb(242, 246, 250);
     margin: 0%;
+    margin-bottom: 3%;
+}
+
+.defaultIcon,
+.defaultCheck{
+    color: white;
+    font-size: x-large;
+}
+
+.starLiked {
+    font-size: x-large;
+    color: rgb(254, 225, 30);
+}
+
+.watched {
+    color: rgb(23, 160, 55);
+    font-size: x-large;
 }

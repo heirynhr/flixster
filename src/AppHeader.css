@@ -1,28 +1,160 @@
 
 
 .App-header {
-  background-color: #282c34;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  color: white;
-  padding: 6px;
-  margin-bottom: 2%;
+    background: #0b2c4d;
+    background: linear-gradient(90deg, rgba(11, 44, 77, 1) 0%, rgba(31, 44, 79, 1) 48%, rgba(40, 49, 77, 1) 97%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    padding: 6px;
+    padding-bottom: 1%;
+}
+#logo {
+    width: 5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 3%;
+    align-items: center;
 }
 #websiteTitle {
     margin: 0.5%;
     margin-top: .5%;
+    width: 50%;
+    text-align: left;
+    justify-content: center;
+    font-family: "Martian Mono", monospace;
+    color: rgb(222, 239, 246);
+    /* color: rgb(234, 234, 241); */
 }
 
 .UserHeader{
     display: flex;
     flex-direction: row;
     align-items: center;
+    
     justify-content: space-evenly;
-    width: 100%;
+    width: 50%;
 }
 
-.searchBox {
-    background-color: aquamarine;
+.UserHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.dropdownSort {
+    background-color: #feffff;
+    color: #FAF9F6;;
+}
+#sorts {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #ffffff;
+    color: #0f2064;
+}
+/* make sure the buttons all look alike */
+.headerNowPlaying,
+#searchBox,
+.dropdownSort {
+    cursor: pointer;
+    height: 50px;
+    min-width: 20px;
+    max-width: 50px;
+    padding: 0 12px;
+
+    overflow: hidden;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: medium;
+    color: #0f2064;
+    border-radius: 10px;
+    background: #FAF9F6;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: max-width 0.4s ease;
+    white-space: nowrap;
+}
+
+/* when you hove over it expand it */
+.headerNowPlaying:hover,
+#searchBox:hover,
+.dropdownSort:hover {
+    max-width: 200px;
+    box-shadow: 0px 8px 8px rgba(117, 8, 180, 0.687);
+}
+
+/* Inside TEXT spans that appear only on hover */
+.headerNowPlaying span,
+.dropdownSort span {
+  overflow: hidden;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+.headerNowPlaying:hover span,
+.dropdownSort:hover span {
+  width: 120px;
+  margin-left: 8px;
+}
+
+/* SEARCH INPUT styles */
+#searchBox {
+  padding: 0 8px;
+}
+
+.searchTyping {
+  width: 0;
+  border: none;
+  background: none;
+  outline: none;
+  color: #333;
+  transition: width 0.3s ease;
+  font-weight: bold;
+}
+
+#searchBox:hover .searchTyping {
+  width: 100px;
+  margin-left: 6px;
+}
+
+.btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  padding: 0 4px;
+}
+.dropdownSort {
+  cursor: pointer;
+  height: 50px;
+  min-width: 50px;
+  max-width: 200px; /* fixed width */
+  padding: 0 12px;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: bold;
+  color: #333;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdownSort select {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-weight: bold;
+  font-family: 'Titillium Web', sans-serif;
+  color: #333;
+  cursor: pointer;
+  width: 100%;
+  padding: 8px;
+  border-radius: 10px;
+  /* make it fill the box */
 }

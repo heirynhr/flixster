@@ -4,12 +4,15 @@
 
 main {
   margin:0;
-  margin-bottom: 5%;
+  padding-bottom: 5%;
   box-sizing: border-box;
+  background: #0f1626;
+background: radial-gradient(circle, rgba(15, 22, 38, 0.97) 33%, rgba(13, 27, 66, 1) 86%, rgba(61, 112, 179, 1) 100%);
 }
 
 footer {
-  background-color: #282c34;
+  background: #0b2c4d;
+  background: linear-gradient(90deg, rgba(11, 44, 77, 1) 0%, rgba(31, 44, 79, 1) 48%, rgba(40, 49, 77, 1) 97%);
   color: white;
   padding: 5px;
   position: fixed;
@@ -32,4 +35,8 @@ footer {
   .search-bar form {
     flex-direction: column;
   }
+}
+
+#footertxt {
+  margin: 0%;
 }
