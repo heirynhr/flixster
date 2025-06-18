@@ -103,11 +103,11 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 ### Walkthrough Video
 
 <div>
-    <a href="https://www.loom.com/share/b7e58cc7018c4da2a93f1e2d72ce54fe">
+    <a href="https://www.loom.com/share/3c38badc86e34454af10328387ae82da">
       <p>Flixster - 17 June 2025 - Watch Video</p>
     </a>
-    <a href="https://www.loom.com/share/b7e58cc7018c4da2a93f1e2d72ce54fe">
-      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/b7e58cc7018c4da2a93f1e2d72ce54fe-f08394b4365cb6ff-full-play.gif">
+    <a href="https://www.loom.com/share/3c38badc86e34454af10328387ae82da">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/3c38badc86e34454af10328387ae82da-0c7c61d027e9cf7a-full-play.gif">
     </a>
   </div>
 
